@@ -1,0 +1,847 @@
+{
+    "nodes": [
+        {
+            "type": "BooleanValueNode",
+            "id": "node_16129883876850",
+            "name": "BooleanValueNode",
+            "options": [
+                [
+                    "Value",
+                    false
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Output",
+                    {
+                        "id": "ni_16129883876851",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 196,
+                "y": 92
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "NumberValueNode",
+            "id": "node_16129883905842",
+            "name": "NumberValueNode",
+            "options": [
+                [
+                    "Value",
+                    0
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Output",
+                    {
+                        "id": "ni_16129883905853",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 469,
+                "y": 108
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "StringValueNode",
+            "id": "node_16129883937214",
+            "name": "StringValueNode",
+            "options": [
+                [
+                    "Value",
+                    ""
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Output",
+                    {
+                        "id": "ni_16129883937215",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 762,
+                "y": 93
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "IndexValueNode",
+            "id": "node_16129883977466",
+            "name": "IndexValueNode",
+            "options": [],
+            "state": {},
+            "interfaces": [
+                [
+                    "Index",
+                    {
+                        "id": "ni_16129883977467",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 1026,
+                "y": 107
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "UniformNode",
+            "id": "node_16129884035538",
+            "name": "UniformNode",
+            "options": [],
+            "state": {},
+            "interfaces": [
+                [
+                    "Output",
+                    {
+                        "id": "ni_16129884035539",
+                        "value": null
+                    }
+                ],
+                [
+                    "Seed",
+                    {
+                        "id": "ni_161298840355310",
+                        "value": ""
+                    }
+                ],
+                [
+                    "Min",
+                    {
+                        "id": "ni_161298840355311",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Max",
+                    {
+                        "id": "ni_161298840355312",
+                        "value": 10
+                    }
+                ],
+                [
+                    "Discrete",
+                    {
+                        "id": "ni_161298840355313",
+                        "value": true
+                    }
+                ]
+            ],
+            "position": {
+                "x": 197.93388429752056,
+                "y": 352.1157024793388
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "NormalNode",
+            "id": "node_161298840676914",
+            "name": "NormalNode",
+            "options": [],
+            "state": {},
+            "interfaces": [
+                [
+                    "Output",
+                    {
+                        "id": "ni_161298840676915",
+                        "value": null
+                    }
+                ],
+                [
+                    "Seed",
+                    {
+                        "id": "ni_161298840676916",
+                        "value": ""
+                    }
+                ],
+                [
+                    "Mean",
+                    {
+                        "id": "ni_161298840676917",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Std. Dev.",
+                    {
+                        "id": "ni_161298840676918",
+                        "value": 10
+                    }
+                ],
+                [
+                    "Discrete",
+                    {
+                        "id": "ni_161298840676919",
+                        "value": true
+                    }
+                ]
+            ],
+            "position": {
+                "x": 465.49586776859496,
+                "y": 347.98347107437985
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "ExponentialNode",
+            "id": "node_161298841018520",
+            "name": "ExponentialNode",
+            "options": [],
+            "state": {},
+            "interfaces": [
+                [
+                    "Output",
+                    {
+                        "id": "ni_161298841018521",
+                        "value": null
+                    }
+                ],
+                [
+                    "Seed",
+                    {
+                        "id": "ni_161298841018522",
+                        "value": ""
+                    }
+                ],
+                [
+                    "Lambda",
+                    {
+                        "id": "ni_161298841018523",
+                        "value": 0.1
+                    }
+                ],
+                [
+                    "Discrete",
+                    {
+                        "id": "ni_161298841018524",
+                        "value": true
+                    }
+                ]
+            ],
+            "position": {
+                "x": 718.5950413223138,
+                "y": 350.0495867768594
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "CustomNode",
+            "id": "node_161298841741025",
+            "name": "CustomNode",
+            "options": [
+                [
+                    "Custom Distribution",
+                    {
+                        "points": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                50,
+                                50
+                            ],
+                            [
+                                100,
+                                20
+                            ]
+                        ],
+                        "mode": "monotone"
+                    }
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Output",
+                    {
+                        "id": "ni_161298841741026",
+                        "value": null
+                    }
+                ],
+                [
+                    "Seed",
+                    {
+                        "id": "ni_161298841741027",
+                        "value": ""
+                    }
+                ],
+                [
+                    "Min",
+                    {
+                        "id": "ni_161298841741028",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Max",
+                    {
+                        "id": "ni_161298841741029",
+                        "value": 10
+                    }
+                ],
+                [
+                    "Discrete",
+                    {
+                        "id": "ni_161298841741030",
+                        "value": true
+                    }
+                ]
+            ],
+            "position": {
+                "x": 970.6611570247933,
+                "y": 351.08264462809916
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "DiscreteNode",
+            "id": "node_161298842502531",
+            "name": "DiscreteNode",
+            "options": [
+                [
+                    "Discrete Distribution",
+                    {
+                        "values": [
+                            66,
+                            61,
+                            54,
+                            40,
+                            34,
+                            31,
+                            29,
+                            28,
+                            39,
+                            55,
+                            60
+                        ]
+                    }
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Output",
+                    {
+                        "id": "ni_161298842502532",
+                        "value": null
+                    }
+                ],
+                [
+                    "Seed",
+                    {
+                        "id": "ni_161298842502533",
+                        "value": ""
+                    }
+                ],
+                [
+                    "Min",
+                    {
+                        "id": "ni_161298842502534",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Max",
+                    {
+                        "id": "ni_161298842502535",
+                        "value": 10
+                    }
+                ]
+            ],
+            "position": {
+                "x": 1226.8595041322315,
+                "y": 367.61157024793374
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "PercentageNode",
+            "id": "node_161298842996036",
+            "name": "PercentageNode",
+            "options": [],
+            "state": {},
+            "interfaces": [
+                [
+                    "Value",
+                    {
+                        "id": "ni_161298842996037",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Seed",
+                    {
+                        "id": "ni_161298842996038",
+                        "value": ""
+                    }
+                ],
+                [
+                    "Percentage",
+                    {
+                        "id": "ni_161298842996039",
+                        "value": 5
+                    }
+                ],
+                [
+                    "Discrete",
+                    {
+                        "id": "ni_161298842996040",
+                        "value": false
+                    }
+                ],
+                [
+                    "Output",
+                    {
+                        "id": "ni_161298842996041",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 1495.4545454545455,
+                "y": 374.8429752066114
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "IfNode",
+            "id": "node_161298843512142",
+            "name": "IfNode",
+            "options": [],
+            "state": {},
+            "interfaces": [
+                [
+                    "Condition",
+                    {
+                        "id": "ni_161298843512143",
+                        "value": false
+                    }
+                ],
+                [
+                    "True Value",
+                    {
+                        "id": "ni_161298843512144",
+                        "value": 0
+                    }
+                ],
+                [
+                    "False Value",
+                    {
+                        "id": "ni_161298843512145",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Output",
+                    {
+                        "id": "ni_161298843512146",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 189.66942148760324,
+                "y": 713.6859504132232
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "SwitchNode",
+            "id": "node_161298843715247",
+            "name": "SwitchNode",
+            "options": [
+                [
+                    "Add Input",
+                    null
+                ],
+                [
+                    "Remove Input",
+                    null
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Switch",
+                    {
+                        "id": "ni_161298843715348",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Value 1",
+                    {
+                        "id": "ni_161298843715349"
+                    }
+                ],
+                [
+                    "Value 2",
+                    {
+                        "id": "ni_161298843715350"
+                    }
+                ],
+                [
+                    "Output",
+                    {
+                        "id": "ni_161298843715351",
+                        "value": null
+                    }
+                ]
+            ],
+            "customInterfaces": {
+                "Value 1": {
+                    "id": "ni_161298843715349"
+                },
+                "Value 2": {
+                    "id": "ni_161298843715350"
+                }
+            },
+            "position": {
+                "x": 517.1487603305784,
+                "y": 729.1818181818182
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "FunctionNode",
+            "id": "node_161298844365752",
+            "name": "FunctionNode",
+            "options": [
+                [
+                    "Edit Function",
+                    "return {\n    output: this.input\n};"
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "input",
+                    {
+                        "id": "ni_161298844365753"
+                    }
+                ],
+                [
+                    "output",
+                    {
+                        "id": "ni_161298844365854",
+                        "value": null
+                    }
+                ]
+            ],
+            "customInterfaces": {
+                "input": {
+                    "isInput": true,
+                    "id": "ni_161298844365753"
+                },
+                "output": {
+                    "isInput": false,
+                    "id": "ni_161298844365854"
+                }
+            },
+            "position": {
+                "x": 241.32231404958668,
+                "y": 1080.4214876033059
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "LogicNode",
+            "id": "node_161298844661755",
+            "name": "LogicNode",
+            "options": [
+                [
+                    "Gatter",
+                    {
+                        "selected": "AND",
+                        "items": [
+                            "AND",
+                            "OR",
+                            "XOR",
+                            "NAND",
+                            "NOR",
+                            "XNOR"
+                        ]
+                    }
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "A",
+                    {
+                        "id": "ni_161298844661756",
+                        "value": true
+                    }
+                ],
+                [
+                    "B",
+                    {
+                        "id": "ni_161298844661757",
+                        "value": true
+                    }
+                ],
+                [
+                    "Result",
+                    {
+                        "id": "ni_161298844661758",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 257.8512396694212,
+                "y": 1282.9008264462807
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "BooleanNode",
+            "id": "node_161298844964859",
+            "name": "BooleanNode",
+            "options": [
+                [
+                    "Operation",
+                    {
+                        "selected": "==",
+                        "items": [
+                            "==",
+                            ">",
+                            "<",
+                            ">=",
+                            "<="
+                        ]
+                    }
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Value 1",
+                    {
+                        "id": "ni_161298844964860",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Value 2",
+                    {
+                        "id": "ni_161298844964961",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Round Values",
+                    {
+                        "id": "ni_161298844964962",
+                        "value": false
+                    }
+                ],
+                [
+                    "Invert Output",
+                    {
+                        "id": "ni_161298844964963",
+                        "value": false
+                    }
+                ],
+                [
+                    "Result",
+                    {
+                        "id": "ni_161298844965064",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 240.28925619834683,
+                "y": 1552.5289256198348
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "ConstraintNode",
+            "id": "node_161298846439365",
+            "name": "ConstraintNode",
+            "options": [],
+            "state": {},
+            "interfaces": [
+                [
+                    "Is Valid",
+                    {
+                        "id": "ni_161298846439366",
+                        "value": true
+                    }
+                ]
+            ],
+            "position": {
+                "x": 241.32231404958617,
+                "y": 1922.3636363636365
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "MathNode",
+            "id": "node_161298847151467",
+            "name": "MathNode",
+            "options": [
+                [
+                    "Operation",
+                    {
+                        "selected": "Arcsine",
+                        "items": [
+                            "Add",
+                            "Subtract",
+                            "Multiply",
+                            "Divide",
+                            "Sine",
+                            "Cosine",
+                            "Tangent",
+                            "Arcsine",
+                            "Arccosine",
+                            "Arctangent",
+                            "Power",
+                            "Logarithm",
+                            "Minimum",
+                            "Maximum",
+                            "Round",
+                            "Modulo",
+                            "Absolute"
+                        ]
+                    }
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Value 1",
+                    {
+                        "id": "ni_161298847151468",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Value 2",
+                    {
+                        "id": "ni_161298847151469",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Result",
+                    {
+                        "id": "ni_161298847151470",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 246.4876033057845,
+                "y": 2062.8595041322305
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "StringListNode",
+            "id": "node_161298847811371",
+            "name": "StringListNode",
+            "options": [
+                [
+                    "Strings",
+                    "String 1\nString 2"
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Index",
+                    {
+                        "id": "ni_161298847811372",
+                        "value": 0
+                    }
+                ],
+                [
+                    "String",
+                    {
+                        "id": "ni_161298847811373",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 248.55371900826378,
+                "y": 2300.4628099173556
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "OutputNode",
+            "id": "node_161298848575374",
+            "name": "OutputNode",
+            "options": [
+                [
+                    "Label",
+                    null
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Input",
+                    {
+                        "id": "ni_161298848575375"
+                    }
+                ]
+            ],
+            "position": {
+                "x": 251.6528925619827,
+                "y": 2607.280991735537
+            },
+            "width": 200,
+            "twoColumn": false
+        }
+    ],
+    "connections": [],
+    "panning": {
+        "x": 329.05965137769243,
+        "y": -1273.8508709261926
+    },
+    "scaling": 0.7462394696847909,
+    "mlsettings": {
+        "batchCount": 100,
+        "workerCount": 4,
+        "csvDelimiter": ";"
+    }
+}
