@@ -1,1 +1,9 @@
-{"nodes": [{"type": "1", "id": "1", "name": "name"}]}
+{
+    "nodes": [
+        {
+            "type": "1",
+            "id": "1",
+            "name": "name"
+        }
+    ]
+}
