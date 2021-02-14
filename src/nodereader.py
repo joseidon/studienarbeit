@@ -7,30 +7,30 @@ def main():
 
 def einlesen():
     text= input("prompt")
-    print(text)
-    if text.startswith("knoten"):
-        knotenString = text.replace('knoten ', '')
-        newString = knotenString.replace(' ','')
-        #print(knotenString)
-        knotenCreation(newString)
-    elif  text.startswith("var"):
-        varString = text.replace('var ', '')
-        newString = varString.replace(' ','')
-        #print(varString)
-        varCreation(varString)
-    else:
-        print("Wrong Input")
-
-def varCreation(input):
-    print("new var")
-    print(input)
-
-def knotenCreation(input):
-    print("new node")
-    print(input)
-    inputList = input.split("=")
-    print(inputList[0])
+    inputt = text.replace(' ','')
+    print(inputt)
+    inputList = inputt.split("=")
+    name = inputList[0]
+    isconstant = name.startswith("$") or name.startswith("%") or name.startswith("!")
+    if isconstant:
+        createConstant()
     print(inputList[1])
+    stringList = inputList[1].split('(')
+    typ = stringList[0]
+    options = stringList[1]
+    knotenCreation(name, typ, options)
+
+def knotenCreation(name, typ, options):
+    nodeTypes = "uniform","normal","exponential","custom","discrete","percentage","if","switch","function","AND","OR","XOR","NAND","NOR","XNOR","==",">","<",">=","<=","constraint","Add","Subtract","Multiply","Divide","Sine","Cosine","Tangent","Arcsine","Arccosine","Arctangent","Power","Logarithm","Minimum","Maximum","Round","Modulo","Absolute","stringlist","output" 
+    if typ not in nodeTypes:
+        print("Error: no type")
+        return
+    
+    
+
+
+def createConstant():
+    print("Konstante")
 
 
 
