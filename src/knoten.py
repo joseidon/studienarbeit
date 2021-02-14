@@ -1,6 +1,7 @@
 class knoten:
     type
     id
+    selection 
     def __init__(self):
         print("test")
     
@@ -10,5 +11,6 @@ class knoten:
     def addID(self, id):
         self.id = id
 
-    def
+    def addselection(self, selection):
+        self.selection = selection
 
