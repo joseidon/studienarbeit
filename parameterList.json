@@ -1,0 +1,14 @@
+{
+    "0": [
+        {
+            "name": "Value1",
+            "typ": "Number"
+        }
+    ],
+    "1": [
+        {
+            "name": "Value2",
+            "typ": "Number"
+        }
+    ]
+}
