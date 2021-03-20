@@ -1,9 +1,37 @@
 {
     "nodes": [
         {
-            "type": "1",
-            "id": "1",
-            "name": "name"
+            "type": "MathNode",
+            "id": "World",
+            "name": "test",
+            "options": [],
+            "state": {},
+            "interfaces": [
+                {
+                    "Output": {
+                        "id": "Worldout",
+                        "value": "null"
+                    }
+                },
+                {
+                    "Value1": {
+                        "id": "testinputValue1",
+                        "value": "null"
+                    }
+                },
+                {
+                    "Value2": {
+                        "id": "testinputValue2",
+                        "value": "null"
+                    }
+                }
+            ],
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "width": 200,
+            "twoColumn": false
         }
     ]
 }

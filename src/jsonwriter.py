@@ -20,5 +20,13 @@ def addNode(data):
         'name': 'name'
     })
 
-if __name__ == '__main__':
-    main()
+def printToJSON(functionInstanceList):
+    headDict = {
+        "nodes":[]
+    }
+    for f in functionInstanceList:
+        newDict = f.getDict()
+        headDict["nodes"].append(newDict)
+
+    with open('data.json', 'w') as outfile:
+        json.dump(headDict, outfile)

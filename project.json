@@ -1,0 +1,173 @@
+{
+    "nodes": [
+        {
+            "type": "MathNode",
+            "id": "World",
+            "name": "test",
+            "options": [
+                [
+                    "Operation",
+                    {
+                        "selected": "Add",
+                        "items": [
+                            "Add",
+                            "Subtract",
+                            "Multiply",
+                            "Divide",
+                            "Sine",
+                            "Cosine",
+                            "Tangent",
+                            "Arcsine",
+                            "Arccosine",
+                            "Arctangent",
+                            "Power",
+                            "Logarithm",
+                            "Minimum",
+                            "Maximum",
+                            "Round",
+                            "Modulo",
+                            "Absolute"
+                        ]
+                    }
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Value 1",
+                    {
+                        "id": "ni_16157473485101",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Value 2",
+                    {
+                        "id": "ni_16157473485102",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Result",
+                    {
+                        "id": "ni_16157473485113",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "NumberValueNode",
+            "id": "node_16157473554884",
+            "name": "NumberValueNode",
+            "options": [
+                [
+                    "Value",
+                    0.5
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Output",
+                    {
+                        "id": "ni_16157473554885",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": -346,
+                "y": -83
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "NumberValueNode",
+            "id": "node_16157473576486",
+            "name": "NumberValueNode",
+            "options": [
+                [
+                    "Value",
+                    0.2
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Output",
+                    {
+                        "id": "ni_16157473576487",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": -271,
+                "y": 149
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "OutputNode",
+            "id": "node_16157473605528",
+            "name": "OutputNode",
+            "options": [
+                [
+                    "Label",
+                    "erg"
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Input",
+                    {
+                        "id": "ni_16157473605529"
+                    }
+                ]
+            ],
+            "position": {
+                "x": 399,
+                "y": 32
+            },
+            "width": 200,
+            "twoColumn": false
+        }
+    ],
+    "connections": [
+        {
+            "id": "161574736281812",
+            "from": "ni_16157473485113",
+            "to": "ni_16157473605529"
+        },
+        {
+            "id": "161574737076215",
+            "from": "ni_16157473554885",
+            "to": "ni_16157473485101"
+        },
+        {
+            "id": "161574737268018",
+            "from": "ni_16157473576487",
+            "to": "ni_16157473485102"
+        }
+    ],
+    "panning": {
+        "x": 566,
+        "y": 173
+    },
+    "scaling": 1,
+    "mlsettings": {
+        "batchCount": 100,
+        "workerCount": 4,
+        "csvDelimiter": ";"
+    }
+}

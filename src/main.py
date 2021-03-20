@@ -1,6 +1,7 @@
 import parameter
 def main():
-    a = parameter()
+    a = parameter.parameter(1,"test")
+    print(a)
 
 
 
