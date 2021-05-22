@@ -1,18 +1,21 @@
 import konstantenManager as km
+import funktion
 
 class functioninstance:
-    name = "foo"
-    typ = "bar"
-    parameterList = list()
-    option=list()
-    knoten = "Hello"
-    fid = "World"
-    #interfaceList
-    #parameters
+    
+    def getOutputTyp(self):
+        self.function.getOutputTyp()
 
-    def addParameter(self, parameter, option):
-        self.parameterList.append(parameter)
-        self.option=option
+    def addParameterInstance(self, p):
+        self.parameterList.append(p)
+
+    def setOutput(self, output):
+        self.output = output
+    
+    def getFunktion(self):
+        return self.function
+
+
 
 
     def getDict(self):
@@ -20,10 +23,11 @@ class functioninstance:
                 "x": 0,
                 "y" : 0
             }
+        oDict = self.function.getOptions()
         fDict = {
-            "type" : self.knoten,
-            "id" : self.fid,
-            "name" : self.name,
+            "type" : self.function.getKnotenTyp(),
+            "id" : "{}{}".format(self.function.getKnotenTyp(),self.fid),
+            "name" : "{}{}".format(self.function.getKnotenTyp(),self.fid),
             "options" : [],
             "state" : {},
             "interfaces":[],
@@ -31,11 +35,12 @@ class functioninstance:
             "width" : 200,
             "twoColumn": False
         }
-        outputID = self.fid + "out"
+        fDict["options"].append(oDict)
+        outputID = "out{}".format(self.fid)
         outputValueDict = {
             "id": outputID,
             "value": "null"
-        }
+        } #from outputvalue
         outputDict = {
             "Output":outputValueDict
         }
@@ -46,20 +51,8 @@ class functioninstance:
             fDict["interfaces"].append(p.getDict())
         return fDict
 
-
-    def print(self):
-        print("Function:")
-        print("Name: ", self.name)
-        print("Typ: ", self.typ)
-        print("Knoten: ", self.knoten)
-        for p in self.parameterList:
-            p.print()
-    
-
-
-    def __init__(self,name,typ,knotentyp):
-        self.name = name
-        self.typ = typ
-        self.knoten = knotentyp
-        self.fid = name
-    
+    def __init__(self, function, fid):
+        self.function = function
+        self.parameterList = list()
+        self.fid = fid
+        self.output = None

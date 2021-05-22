@@ -19,7 +19,7 @@ def printAll(functionInstanceList):
     for functionF in functionInstanceList:
         functionF.print()
 
-#eingabe name=typ(option,option)
+#eingabe name = typ(option,option)
 def einlesen(functionInstanceList, kManager):
     
     text= input("prompt")

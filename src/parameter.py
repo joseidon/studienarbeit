@@ -1,39 +1,24 @@
-import pandas as pd
-import numpy as np
-import konstantenManager as km
-
+import parameterinstance as pi
 class parameter:
-    name = None
-    typ = None
-    #knoten = "placeholder"
-    pid = 1
-    #inputValue 
 
-    def print(self):
-        print("Parameterame: ", self.name)
-        print("Typ: ", self.typ)
-        #print("Knoten: ", self.knoten)
-        print("ID: ", self.pid)
+    def createParameterInstance(self, value):
+        p = pi.parameterinstance(self, self.pid)
+        self.pid = self.pid + 1
+        return p
 
-    def getDict(self):
-        
-        paramDict = {
-            "id" : self.pid,
-            "value" : "null"
-        }
-        pDict = {
-            self.name : paramDict
-        }
+    def createOuput(self):
+        p = pi.parameterinstance(self, self.pid)
+        self.pid = self.pid + 1
+        return p
 
-        return pDict
-#
-    def __init__(self, knid, knotenname, kManager, option):
-        parameterList = pd.read_csv("parameterList.csv")
-        print(parameterList)
-        df = parameterList[str(knid)]
-        print("ParamterCreation: ", df['name'])
-        self.pid = knotenname+"input"+str(df['name'])
-        self.name=df['name']
-        self.typ = df['type']
+    def getName(self):
+        return self.name
 
-        #create Connection
+    def getTyp(self):
+        return self.typ
+
+    def __init__(self, name, typ):
+        self.name=name
+        self.typ=typ
+        self.pid = 0
+    

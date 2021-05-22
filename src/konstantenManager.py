@@ -1,34 +1,32 @@
 import konstante
-import connection
+import managermanager
 
 class konstantenManager:
-    konstantenList = list()
-    ConnectionList = list()
-    connectionID = 1
+    
 
-    def addKonstante(self, konstante,typ):
+    def addKonstante(self, konstante, typ):
         #change konstante to konstante
-        k = konstante(konstante,typ)
-        self.konstantenList.append(k)
+        k = konstante.konstante(konstante,typ, konstante)
+        self.konstantenList[k] = k
         return k
 
     def getOrCreateKonstante(self, konstante, typ):
+        #rework
         for k in self.konstantenList:
             if konstante == k.getName():                
                 return k
         k=self.addKonstante(konstante, typ)
         return k
         
-    def createConnection(self, start, end):
-        
+    #outdated
 
-        c = connection.connection(self.connectionID,start,end)
-        self.connectionID = self.connectionID + 1
-        self.ConnectionList.append(c)
-    
-    def getCList(self):
-        return self.ConnectionList
-        
+    def createNamedKonstante(self, name, typ, konstante):
+        k = konstante.konstante(name, typ, konstante)
+        return k
+        print("test")
 
-    def __init__(self):
+
+    def __init__(self, manager):
+        self.manager = manager
+        self.konstantenList = {}
         print("create List")

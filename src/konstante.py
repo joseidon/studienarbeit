@@ -1,6 +1,5 @@
 class konstante:
-    name = "name"
-    typ = "typ"
+
 
     def getDict(self):
         posDict = {
@@ -44,8 +43,13 @@ class konstante:
         outputID = self.name + "out"
         return outputID
 
-    def __init__(self,name,typ):
-        print("Konstatne")
+    def __init__(self,name,typ, value, kManager):
+        types = ["Number","String","Boolean"]
+        print("Konstante")
         self.name=name
-        self.typ = typ #typen regeln
-        self.value = name
+        self.value=value
+        self.kManager=kManager
+        if typ in types:
+            self.typ = typ #typen regeln
+        else:
+            print("Kein gültiger Typ")

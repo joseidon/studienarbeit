@@ -1,8 +1,8 @@
-Add
-anzPara,2
-Knoten,MathNode
-1,1
-2,2
-3,
-4,
-5,
+Add,Sub,Inc
+anzPara,2,2,1
+Knoten,MathNode,MathNode
+1,1,1
+2,2,2
+3,,
+4,,
+5,,
