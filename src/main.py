@@ -1,8 +1,9 @@
 import parameter
 def main():
-    a = parameter.parameter(1,"test")
-    print(a)
+    headDict = '{\n\t"nodes": [\n\t\t{'
 
+    head
+    print(headDict)
 
 
 

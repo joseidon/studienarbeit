@@ -59,9 +59,8 @@ class variablenManager:
 
     def getDict(self):
         fManager = self.manager.getFunctionManager()
-        headDict = {
-            "nodes":[]
-        }
+        headDict = '{\n\t"nodes": [\n\t\t{'
+        headDict = headDict + '\t],\n{'
         fDict = fManager.getDict(headDict)
 
         with open('data.json', 'w') as outfile:

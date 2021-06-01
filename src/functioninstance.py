@@ -15,41 +15,23 @@ class functioninstance:
     def getFunktion(self):
         return self.function
 
-
-
+    def getInterfaces(self):
+        interfaces='"state": { },"interfaces": ['
+        if (self.function.knotentyp =="MathNode"):
+            interfaces=interfaces + '["Value 1",{"id":"' +self.function.functionName + self.fid +'v1","value": 0}],'
+            interfaces=interfaces + '["Value 2",{"id":"' +self.function.functionName + self.fid +'v2","value": 0}],'
+            interfaces=interfaces + '["Result",{"id":"' +self.function.functionName + self.fid +'r","value": null}]],'
+            return interfaces
+   
 
     def getDict(self):
-        posDict = {
-                "x": 0,
-                "y" : 0
-            }
-        oDict = self.function.getOptions()
-        fDict = {
-            "type" : self.function.getKnotenTyp(),
-            "id" : "{}{}".format(self.function.getKnotenTyp(),self.fid),
-            "name" : "{}{}".format(self.function.getKnotenTyp(),self.fid),
-            "options" : [],
-            "state" : {},
-            "interfaces":[],
-            "position" : posDict,
-            "width" : 200,
-            "twoColumn": False
-        }
-        fDict["options"].append(oDict)
-        outputID = "out{}".format(self.fid)
-        outputValueDict = {
-            "id": outputID,
-            "value": "null"
-        } #from outputvalue
-        outputDict = {
-            "Output":outputValueDict
-        }
-        
 
-        fDict["interfaces"].append(outputDict)
-        for p in self.parameterList:
-            fDict["interfaces"].append(p.getDict())
-        return fDict
+        dictHead = '"type":"{}","id":"{}{}","name":"{}",'.format(self.function.getKnotenTyp(),self.function.getKnotenTyp(),self.fid,self.function.getKnotenTyp(),self.fid)
+        options = self.function.getOption()
+        interfaces = self.getInterfaces
+        dictend =  '"position": {"x": 0,"y": 0}, "width": 200, "twoColumn": false}'
+        dictHead=dictHead+options+interfaces+dictend
+        return dictHead
 
     def __init__(self, function, fid):
         self.function = function

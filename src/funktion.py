@@ -18,9 +18,13 @@ class funktion:
         return f
 
     def getDict(self):
-        dictList = list()
+        dictList = ""
+        first =True
         for f in self.nodeList:
-            dictList.append(f.getDict())
+            if (first==True):
+                dictList=dictList+","
+            first=False
+            dictList=dictList + f.getDict()
         return dictList
 
     def setOutput(self, output):
@@ -34,11 +38,21 @@ class funktion:
 
     def getKnotenTyp(self):
         return self.knotentyp
-
+    
+    
     def getOptions(self):
+        options='"options":['
+        midpart=None
         if (self.knotentyp =="MathNode"):
-            mathnodeList = ["Add","Subtract","Multiply","Divide","Sine","Cosine","Tangent","Arcsine","Arccosine","Arctangent","Power","Logarithm","Minimum","Maximum","Round","Modulo","Absolute"]
-            print('Mathnode')
+            midpart='["Operation",{"selected":"'
+            midpart=midpart+self.functionName
+            midpart=midpart+'","items":["Add","Subtract","Multiply","Divide","Sine","Cosine","Tangent","Arcsine","Arccosine","Arctangent","Power","Logarithm","Minimum","Maximum","Round","Modulo","Absolute"]'
+            midpart=midpart+'}]],'
+        options = options+midpart
+        return options
+        #if (self.knotentyp =="MathNode"):
+        #    mathnodeList = ["Add","Subtract","Multiply","Divide","Sine","Cosine","Tangent","Arcsine","Arccosine","Arctangent","Power","Logarithm","Minimum","Maximum","Round","Modulo","Absolute"]
+        #    print('Mathnode')
            # midDict = 
             #oDict= {
             #    [

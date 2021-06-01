@@ -4,10 +4,16 @@ import parameter
 class funktionsmanager:
     
     def getDict(self, headDict):
+        first=True
         for f in self.funktionsList.items():
+            #hier zusammenfügen
             dictList = f[1].getDict()
             for d in dictList:
-                headDict["nodes"].append(d)
+                if(first!=True):
+                    headDict=headDict+ ','
+                first=False
+                #hier zusammenfügen
+                headDict=headDict+ d.getDict()
         return headDict
 
     def addKnoten(self):
