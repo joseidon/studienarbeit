@@ -2,7 +2,7 @@
     "nodes": [
         {
             "type": "MathNode",
-            "id": "Node_16225779437028",
+            "id": "MathNode0",
             "name": "MathNode",
             "options": [
                 [
@@ -36,178 +36,152 @@
                 [
                     "Value 1",
                     {
-                        "id": "ni_16225779437029",
-                        "value": 3
+                        "id": "ni_1623099085120101",
+                        "value": 2.000
                     }
                 ],
                 [
                     "Value 2",
                     {
-                        "id": "ni_162257794370210",
-                        "value": 4
-                    }
-                ],
-                [
-                    "Result",
-                    {
-                        "id": "ni_162257794370211",
-                        "value": null
-                    }
-                ]
-            ],
-            "position": {
-                "x": 503,
-                "y": 287
-            },
-            "width": 200,
-            "twoColumn": false
-        },
-        {
-            "type": "MathNode",
-            "id": "node_162257794656612",
-            "name": "MathNode",
-            "options": [
-                [
-                    "Operation",
-                    {
-                        "selected": "Add",
-                        "items": [
-                            "Add",
-                            "Subtract",
-                            "Multiply",
-                            "Divide",
-                            "Sine",
-                            "Cosine",
-                            "Tangent",
-                            "Arcsine",
-                            "Arccosine",
-                            "Arctangent",
-                            "Power",
-                            "Logarithm",
-                            "Minimum",
-                            "Maximum",
-                            "Round",
-                            "Modulo",
-                            "Absolute"
-                        ]
-                    }
-                ]
-            ],
-            "state": {},
-            "interfaces": [
-                [
-                    "Value 1",
-                    {
-                        "id": "ni_162257794656613",
-                        "value": 0.9999999999999999
-                    }
-                ],
-                [
-                    "Value 2",
-                    {
-                        "id": "ni_162257794656614",
-                        "value": 2
-                    }
-                ],
-                [
-                    "Result",
-                    {
-                        "id": "ni_162257794656615",
-                        "value": null
-                    }
-                ]
-            ],
-            "position": {
-                "x": 505,
-                "y": 11
-            },
-            "width": 200,
-            "twoColumn": false
-        },
-        {
-            "type": "MathNode",
-            "id": "node_162257795023716",
-            "name": "MathNode",
-            "options": [
-                [
-                    "Operation",
-                    {
-                        "selected": "Add",
-                        "items": [
-                            "Add",
-                            "Subtract",
-                            "Multiply",
-                            "Divide",
-                            "Sine",
-                            "Cosine",
-                            "Tangent",
-                            "Arcsine",
-                            "Arccosine",
-                            "Arctangent",
-                            "Power",
-                            "Logarithm",
-                            "Minimum",
-                            "Maximum",
-                            "Round",
-                            "Modulo",
-                            "Absolute"
-                        ]
-                    }
-                ]
-            ],
-            "state": {},
-            "interfaces": [
-                [
-                    "Value 1",
-                    {
-                        "id": "ni_162257795023717",
-                        "value": 0
-                    }
-                ],
-                [
-                    "Value 2",
-                    {
-                        "id": "ni_162257795023718",
+                        "id": "ni_1623099085120102",
                         "value": 0
                     }
                 ],
                 [
                     "Result",
                     {
-                        "id": "ni_162257795023719",
+                        "id": "testout",
                         "value": null
                     }
                 ]
             ],
             "position": {
-                "x": 794,
-                "y": 172
+                "x": -37.33185112057774,
+                "y": -51.849793223024626
             },
             "width": 200,
             "twoColumn": false
         },
         {
-            "type": "OutputNode",
-            "id": "node_162257795306920",
-            "name": "OutputNode",
+            "type": "MathNode",
+            "id": "MathNode1",
+            "name": "MathNode",
             "options": [
                 [
-                    "Label",
-                    "Ergebnis"
+                    "Operation",
+                    {
+                        "selected": "Add",
+                        "items": [
+                            "Add",
+                            "Subtract",
+                            "Multiply",
+                            "Divide",
+                            "Sine",
+                            "Cosine",
+                            "Tangent",
+                            "Arcsine",
+                            "Arccosine",
+                            "Arctangent",
+                            "Power",
+                            "Logarithm",
+                            "Minimum",
+                            "Maximum",
+                            "Round",
+                            "Modulo",
+                            "Absolute"
+                        ]
+                    }
                 ]
             ],
             "state": {},
             "interfaces": [
                 [
-                    "Input",
+                    "Value 1",
                     {
-                        "id": "ni_162257795306921"
+                        "id": "value0",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Value 2",
+                    {
+                        "id": "ni_1623099085122106",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Result",
+                    {
+                        "id": "test2out",
+                        "value": null
                     }
                 ]
             ],
             "position": {
-                "x": 1108,
-                "y": 138
+                "x": 307.25897105122357,
+                "y": 74.66370224115549
+            },
+            "width": 200,
+            "twoColumn": false
+        },
+        {
+            "type": "MathNode",
+            "id": "MathNode2",
+            "name": "MathNode",
+            "options": [
+                [
+                    "Operation",
+                    {
+                        "selected": "Subtract",
+                        "items": [
+                            "Add",
+                            "Subtract",
+                            "Multiply",
+                            "Divide",
+                            "Sine",
+                            "Cosine",
+                            "Tangent",
+                            "Arcsine",
+                            "Arccosine",
+                            "Arctangent",
+                            "Power",
+                            "Logarithm",
+                            "Minimum",
+                            "Maximum",
+                            "Round",
+                            "Modulo",
+                            "Absolute"
+                        ]
+                    }
+                ]
+            ],
+            "state": {},
+            "interfaces": [
+                [
+                    "Value 1",
+                    {
+                        "id": "ni_1623099085123109",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Value 2",
+                    {
+                        "id": "ni_1623099085123110",
+                        "value": 0
+                    }
+                ],
+                [
+                    "Result",
+                    {
+                        "id": "subout",
+                        "value": null
+                    }
+                ]
+            ],
+            "position": {
+                "x": -352.5785939165676,
+                "y": 254.37218196373829
             },
             "width": 200,
             "twoColumn": false
@@ -215,26 +189,26 @@
     ],
     "connections": [
         {
-            "id": "162257797791025",
-            "from": "ni_162257794370211",
-            "to": "ni_162257795023718"
+            "id": "1623099090895116",
+            "from": "testout",
+            "to": "value0"
         },
         {
-            "id": "162257798177529",
-            "from": "ni_162257794656615",
-            "to": "ni_162257795023717"
+            "id": "1623099094552119",
+            "from": "subout",
+            "to": "ni_1623099085122106"
         },
         {
-            "id": "162257798474932",
-            "from": "ni_162257795023719",
-            "to": "ni_162257795306921"
+            "id": "1623099104919124",
+            "from": "subout",
+            "to": "ni_1623099085120102"
         }
     ],
     "panning": {
-        "x": -304,
-        "y": -18
+        "x": 572.9494319336654,
+        "y": 91.05566179002057
     },
-    "scaling": 1,
+    "scaling": 0.964324,
     "mlsettings": {
         "batchCount": 100,
         "workerCount": 4,

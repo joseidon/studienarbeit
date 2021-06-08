@@ -13,28 +13,19 @@ class variablenManager:
         return self.manager
 
     def readLine(self, text):
-        if text.startswith('var'):
-            self.checkVarValid(text)
+        if text.startswith('node'):
+            self.createNode(text)
         elif text.startswith('printjson'):
             self.getDict()
         elif text.startswith('exit'):
             exit()     
         else:    
-            self.checkForEqual(text)
+            print("Wrong input, either start with 'node', 'printjson' or 'exit'")
 
-    def checkVarValid(self, text):
-        types = ["Number", "Boolean", "String"]
-        varText = text.split(' ')
-        if len(varText) !=3:
-            print("wrong number of arguements for Variable creation. Pease type var [typ] [name]")
-            return
-        varTyp = varText[1]
-        if varTyp not in types:
-            print("ungültiger Variablentyp: ", varTyp)
-            return
-        varName = varText[2]
-        v = var.variable(varName, varTyp, self)
-        self.varList[varName] = v
+    def createNode(self,text):
+        fManager = self.manager.getFunctionManager()
+        fManager.createNode(text)
+        
 
     def checkForEqual(self, text):
         text = text.replace(" ", "")
@@ -59,21 +50,16 @@ class variablenManager:
 
     def getDict(self):
         fManager = self.manager.getFunctionManager()
-        headDict = '{\n\t"nodes": [\n\t\t{'
-        headDict = headDict + '\t],\n{'
-        fDict = fManager.getDict(headDict)
+        headDict = '{"nodes": [{'
 
+        fDict = fManager.getDict(headDict)
+        fDict = fDict + '],"connections": ['
+        #add connections
+        fDict=fDict+']}'
         with open('data.json', 'w') as outfile:
             print(fDict)
-            json.dump(fDict, outfile)
-        
-
-    def typeCheck(self, v, varObject):
-        if varObject.getOutputTyp()==v.getTyp:
-            return
-        else:
-            print("Typen nicht konform")
-            #knoten löschen
+            #json.dump(fDict, outfile)
+            outfile.write(fDict)
 
             
     def checkForBrackets(self, text):

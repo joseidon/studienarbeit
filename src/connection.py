@@ -1,18 +1,13 @@
 class connection:
-    start = "hello"
-    end = "world"
-    id = 0
+    idcnt=0
 
     def getDict(self):
-        cDict = {
-            "id": self.id,
-            "from": self.start,
-            "to": self.end
-        }
-        return cDict
+        cdict='{"id": "'+str(self.id)+'","from": "'+str(self.start)+'", "to": "'+str(self.end)+'"}'
+        return cdict
 
-    def __init__(self,id,start,end):
-        self.id = id
+    def __init__(self,start,end):
+        self.id = connection.idcnt
         self.start = start
         self.end = end
+        connection.idcnt=connection.idcnt+1
 
