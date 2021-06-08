@@ -1,5 +1,7 @@
-# studienarbeit
-Code der Studienarbeit
+# Studienarbeit
+Code der Studienarbeit<br>
+
+Um den Generator zu verwenden, muss die einlesen.py Klasse mit Python gestartet werden und danach der Generator mit folgenden Befehlen gefüttert werden:<br>
 
 Syntax des JSON-Generators:<br>
 printjson druckt eine JSON-Datei<br>
