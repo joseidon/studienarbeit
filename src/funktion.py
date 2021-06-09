@@ -18,8 +18,9 @@ class funktion:
             newP = p.createParameterInstance(values[i], manager)
             f.addParameterInstance(newP)
             i=i+1
-        newO = self.output.createOuput(name, manager)
-        f.setOutput(newO)
+        if(self.knotentyp!='ConstraintNode'):
+            newO = self.output.createOuput(name, manager)
+            f.setOutput(newO)
         self.nodeList.append(f)
         return f
 
@@ -66,6 +67,16 @@ class funktion:
         if(self.knotentyp=='OutputNode'):
             label = f.getLabel()
             midpart= '["Label","{}"]'.format(str(label))
+        if(self.knotentyp=='CustomNode'):
+            midpart='["Custom Distribution",{"points": [[0,0],[50,50],[100,20]],"mode": "monotone"}]'
+        if(self.knotentyp=='DiscreteNode'):
+            midpart='["Discrete Distribution", { "values": [5,5,5,5,5,5,5,5,5,5]}]'
+        if(self.knotentyp=='SwitchNode'):
+            midpart='["Add Input",null],["Remove Input",null ]'
+        if(self.knotentyp=='FunctionNode'):
+            midpart='["Edit Function", "return {\n    output: this.input\n};"]'
+        if(self.knotentyp=='StringListNode'):
+            midpart='["Strings","String 1\nString 2" ]'
         if (self.knotentyp =="MathNode"):
             midpart='["Operation",{"selected":"'
             midpart=midpart+self.functionName

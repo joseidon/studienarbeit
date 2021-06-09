@@ -4,7 +4,7 @@ class parameterinstance:
         self.value = value
         if(self.value==None):
             self.value="null"
-        print(self.value)
+        #print(self.value)
 
     def getValue(self):
         return self.value
@@ -15,8 +15,8 @@ class parameterinstance:
     def getDict(self):
         if(self.parameter.name=='Input'):
             interface='["' + self.parameter.name + '",{"id":"' +str(self.pid) +'"}]'
-            print('world')
-            print(interface)
+            #print('world')
+            #print(interface)
             return interface
         
         interface='["' + self.parameter.name + '",{"id":"' +str(self.pid) +'","value": ' +str(self.value).lower()+'}]'

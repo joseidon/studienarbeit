@@ -140,14 +140,14 @@ class funktionsmanager:
 
         percentage=funktion.funktion("Percentage", "PercentageNode", self)
         per1=parameter.parameter("Value", "Number")
-        per1=parameter.parameter("Seed", "Number")
-        per1=parameter.parameter("Percentage", "Number")
-        per1=parameter.parameter("Discrete", "Boolean")      
+        per2=parameter.parameter("Seed", "Number")
+        per3=parameter.parameter("Percentage", "Number")
+        per4=parameter.parameter("Discrete", "Boolean")      
         perout=parameter.parameter("Output", "Number")
         percentage.parameterList.append(per1)
-        percentage.parameterList.append(per1)
-        percentage.parameterList.append(per1)
-        percentage.parameterList.append(per1)
+        percentage.parameterList.append(per2)
+        percentage.parameterList.append(per3)
+        percentage.parameterList.append(per4)
         percentage.setOutput(perout)
         self.funktionsList[percentage.getName()] = percentage
 
@@ -176,4 +176,80 @@ class funktionsmanager:
             add.parameterList.append(addp4)
             add.setOutput(addOut)
             self.funktionsList[add.getName()] = add
-            
+
+        index=funktion.funktion("Index", "IndexValueNode", self)
+        indout=parameter.parameter("Output", "Number")
+        index.setOutput(indout)
+        self.funktionsList[index.getName()] = index
+
+        custom=funktion.funktion("Custom", "CustomNode", self)
+        cus1=parameter.parameter("Seed", "String")
+        cus2=parameter.parameter("Min", "Number")
+        cus3=parameter.parameter("Max", "Number")
+        cus4=parameter.parameter("Discrete", "Boolean")      
+        cusout=parameter.parameter("Output", "Number")
+        custom.parameterList.append(cus1)
+        custom.parameterList.append(cus2)
+        custom.parameterList.append(cus3)
+        custom.parameterList.append(cus4)
+        custom.setOutput(cusout)
+        self.funktionsList[custom.getName()] = custom
+
+        discrete=funktion.funktion("Discrete", "DiscreteNode", self)
+        dis1=parameter.parameter("Seed", "String")
+        dis2=parameter.parameter("Min", "Number")
+        dis3=parameter.parameter("Max", "Number")
+        disout=parameter.parameter("Output", "Number")
+        discrete.parameterList.append(dis1)
+        discrete.parameterList.append(dis2)
+        discrete.parameterList.append(dis3)
+        discrete.setOutput(disout)
+        self.funktionsList[discrete.getName()] = discrete
+
+        ifnode=funktion.funktion("If", "IfNode", self)
+        if1=parameter.parameter("Condition", "Boolean")
+        if2=parameter.parameter("True Value", "Boolean")
+        if3=parameter.parameter("False Value", "Boolean")
+        ifout=parameter.parameter("Output", "Boolean")
+        ifnode.parameterList.append(if1)
+        ifnode.parameterList.append(if2)
+        ifnode.parameterList.append(if3)
+        ifnode.setOutput(ifout)
+        self.funktionsList[ifnode.getName()] = ifnode
+
+        switch=funktion.funktion("Switch", "SwitchNode", self)
+        sw1=parameter.parameter("Switch", "Boolean")
+        sw2=parameter.parameter("Value 1", "Boolean")
+        sw3=parameter.parameter("Value 2", "Boolean")
+        swout=parameter.parameter("Output", "Boolean")
+        switch.parameterList.append(sw1)
+        switch.parameterList.append(sw2)
+        switch.parameterList.append(sw3)
+        switch.setOutput(swout)
+        self.funktionsList[switch.getName()] = switch
+
+        func=funktion.funktion("Function", "FunctionNode", self)
+        f1=parameter.parameter("input", "Boolean")
+        fout=parameter.parameter("output", "Boolean")
+        func.parameterList.append(f1)
+        func.setOutput(fout)
+        self.funktionsList[func.getName()] = func
+
+        con=funktion.funktion("Constraint", "ConstraintNode", self)
+        con1=parameter.parameter("Is Valid", "Boolean")
+        con.parameterList.append(con1)
+        self.funktionsList[con.getName()] = con
+
+        stringl=funktion.funktion("StringList", "StringListNode", self)
+        s1=parameter.parameter("Index", "Number")
+        sout=parameter.parameter("String", "String")
+        stringl.parameterList.append(s1)
+        stringl.setOutput(sout)
+        self.funktionsList[stringl.getName()] = stringl
+
+        
+
+
+        
+
+

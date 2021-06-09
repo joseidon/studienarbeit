@@ -49,6 +49,14 @@ class functioninstance:
         
         dictend =  '"position": {"x": '+str(self.pos)+',"y": '+str(self.pos)+' }, "width": 200, "twoColumn": false}'
         print(dictend)
+        if(self.function.knotentyp=='SwitchNode' or self.function.knotentyp=='FunctionNode'):
+            custom=''
+            if(self.function.knotentyp=='SwitchNode'):
+                custom= '"customInterfaces": {"Value 1": {"id": "ni_162322927080720"},"Value 2": {"id": "ni_162322927080721"}},'
+            if( self.function.knotentyp=='FunctionNode'):
+                custom='"customInterfaces": {"input": {"isInput": true,"id": "ni_162322927352624"},"output": {"isInput": false,"id": "ni_162322927352625"} },'
+        
+        
         dictHead=dictHead+options+interfaces+dictend
         return dictHead
 
