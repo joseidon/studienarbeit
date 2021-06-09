@@ -222,6 +222,8 @@ class funktionsmanager:
         sw2=parameter.parameter("Value 1", "Boolean")
         sw3=parameter.parameter("Value 2", "Boolean")
         swout=parameter.parameter("Output", "Boolean")
+        sw2.setCustom()
+        sw3.setCustom()
         switch.parameterList.append(sw1)
         switch.parameterList.append(sw2)
         switch.parameterList.append(sw3)
@@ -230,6 +232,7 @@ class funktionsmanager:
 
         func=funktion.funktion("Function", "FunctionNode", self)
         f1=parameter.parameter("input", "Boolean")
+        f1.setCustom()
         fout=parameter.parameter("output", "Boolean")
         func.parameterList.append(f1)
         func.setOutput(fout)
@@ -247,7 +250,7 @@ class funktionsmanager:
         stringl.setOutput(sout)
         self.funktionsList[stringl.getName()] = stringl
 
-        
+
 
 
         

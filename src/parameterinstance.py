@@ -13,7 +13,7 @@ class parameterinstance:
         return self.parameter
 
     def getDict(self):
-        if(self.parameter.name=='Input'):
+        if(self.parameter.name=='Input' or self.parameter.customflag):
             interface='["' + self.parameter.name + '",{"id":"' +str(self.pid) +'"}]'
             #print('world')
             #print(interface)

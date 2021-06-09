@@ -50,7 +50,7 @@ class funktion:
 
     def setOutput(self, output):
         self.output = output
-
+        
     def getName(self):
         return self.functionName
 
@@ -74,9 +74,9 @@ class funktion:
         if(self.knotentyp=='SwitchNode'):
             midpart='["Add Input",null],["Remove Input",null ]'
         if(self.knotentyp=='FunctionNode'):
-            midpart='["Edit Function", "return {\n    output: this.input\n};"]'
+            midpart='["Edit Function", "return {\\n    output: this.input\\n};"]'
         if(self.knotentyp=='StringListNode'):
-            midpart='["Strings","String 1\nString 2" ]'
+            midpart='["Strings","String 1\\nString 2" ]'
         if (self.knotentyp =="MathNode"):
             midpart='["Operation",{"selected":"'
             midpart=midpart+self.functionName

@@ -33,7 +33,14 @@ class parameter:
     def getTyp(self):
         return self.typ
 
+    def setFunction(self, f):
+        self.function=f
+
+    def setCustom(self):
+        self.customflag=True
+
     def __init__(self, name, typ):
         self.name=name
         self.typ=typ
+        self.customflag=False
             

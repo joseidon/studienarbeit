@@ -55,9 +55,9 @@ class functioninstance:
                 custom= '"customInterfaces": {"Value 1": {"id": "ni_162322927080720"},"Value 2": {"id": "ni_162322927080721"}},'
             if( self.function.knotentyp=='FunctionNode'):
                 custom='"customInterfaces": {"input": {"isInput": true,"id": "ni_162322927352624"},"output": {"isInput": false,"id": "ni_162322927352625"} },'
-        
-        
-        dictHead=dictHead+options+interfaces+dictend
+            dictHead=dictHead+options+interfaces+custom+dictend
+        else:
+            dictHead=dictHead+options+interfaces+dictend
         return dictHead
 
     def __init__(self, function, fid, name):
